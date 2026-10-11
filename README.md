@@ -1,6 +1,6 @@
 # Chaos on Deponia: Earth Platypus Minigame Fix
 
-An unofficial Windows patch for the Earth Platypus puzzle's corrupted
+A Windows patch for the Earth Platypus puzzle's corrupted
 saved-state problem: a missing egg/platypus, disappearing stones, or
 unclickable holes caused by missing puzzle tables or a stale puzzle lock.
 
@@ -10,9 +10,9 @@ unclickable holes caused by missing puzzle tables or a stale puzzle lock.
 ## Requirements
 
 - Windows version of Chaos on Deponia, supported build **3.3.2351 /
-  Visionaire player 4.2**, with the exact original archive checksum.
+  Visionaire player 4.2**, with the supported original game archive.
 - Windows PowerShell 5.1 and .NET; no Python or additional runtime installation
-  was needed on the tested Windows setup.
+  is required.
 - A writable game folder and space for original archive and save backups.
 
 The version label alone is insufficient: other editions, languages with a
@@ -30,12 +30,12 @@ different archive, and modified game archives are safely refused.
 Use the named release asset above. GitHub's automatically generated
 **Source code (zip)** is a separate repository download.
 
-The installer backs up and verifies the original archive and existing saves
+The installer backs up the original archive and existing saves
 in **EarthPlatypusFixBackup** inside the game folder. Saves are never edited.
 
 ## Uninstall
 
-Close the game and double-click **Uninstall.cmd**. It restores the verified
+Close the game and double-click **Uninstall.cmd**. It restores the
 original archive, retaining current saves and all backups. Keep the backup
 folder; uninstall refuses to overwrite an archive changed by a mod or update.
 
@@ -48,24 +48,6 @@ retained, and the puzzle is not automatically completed.
 
 This release contains the minigame repair only. It includes no FPS limiter,
 resolution changes, personal saves, or full game archive. It does not fix
-every possible high-refresh-rate input issue. It is not an official
-Daedalic release.
-
-## Validation
-
-- The affected player confirmed the version 2 repair worked in-game.
-- The saved-state failure and repair were tested under Lua 5.1.
-- Install/uninstall and both CMD launchers passed tests on an isolated game
-  copy using Windows PowerShell 5.1, including verified backups and refusal
-  of modified archives, damaged downloads, and damaged original backups.
-- The delta reconstructs exactly the verified version 2 archive. Only three
-  puzzle script strings change; the other 2,628 archive resources are unchanged.
-- Wider compatibility across editions and language archives is unverified.
-
-ZIP SHA-256:
-
-```text
-51fb29e111216d0667876a35eb9882a0eba55a94be6bbaa9f3dcc87eb09e93f4
-```
+every possible high-refresh-rate input issue.
 
 Readable installer source and the binary delta are in [EarthPlatypusFix](EarthPlatypusFix).
