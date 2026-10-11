@@ -1,0 +1,14 @@
+{
+  "format": "EPLATYP2",
+  "patch_version": 2,
+  "game_version": "3.3.2351 / Visionaire 4.2, Windows",
+  "original_sha256": "7b36ae550eeecf347c4302844754c2728ccc421849961dfe32f44aa255654eac",
+  "patched_sha256": "36f7f596593be9bf817d4827c2478e131cab2740eee2247751cc162838fd805e",
+  "delta_sha256": "cb0493de8e8b2beca7f2d4f1e2bee3e33d8754f3613d915decb4648111c264a4",
+  "original_bytes": 55904517,
+  "patched_bytes": 55905416,
+  "delta_bytes": 5446374,
+  "changed_puzzle_scripts": 3,
+  "includes_fps_or_resolution_changes": false,
+  "includes_personal_saves": false
+}
